@@ -21,19 +21,21 @@ A class for scoring physiotherapy sessions based on stability, smoothness, and c
 
 ## Demo
 
-The `day3_demo.py` script simulates a physiotherapy session and demonstrates the integration of the above classes.
+The `day3_demo.py` script provides a real-time physiotherapy session demo using webcam input.
 
 ### Running the Demo
-1. Ensure Python 3 and NumPy are installed.
+1. Ensure Python 3, NumPy, OpenCV, and MediaPipe are installed.
 2. Run: `python day3_demo.py`
 
-This will simulate joint angles for a raise-hold-lower sequence, detect phases, and output session scores.
+This will open the webcam, detect pose, calculate elbow angles, detect movement phases, provide live feedback (phase, correction, severity, score delta), and display the final session scores. Press 'q' to quit.
 
 ## Requirements
 - Python 3.x
 - NumPy
+- OpenCV
+- MediaPipe
 
-Install dependencies: `pip install numpy`
+Install dependencies: `pip install numpy opencv-python mediapipe`
 
 ## Project Structure
 - `movement_phase.py`: Movement phase detection logic.
